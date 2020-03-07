@@ -1,0 +1,1 @@
+As a student user, the student may submit anonymous feedback by clicking on the ‘home’ button and navigating to the bottom of the page, to express any concerns or provide constructive feedback of the course for the instructor. After filling out the form and clicking 'submit', the user will be prompted with a text 'message sent!'.

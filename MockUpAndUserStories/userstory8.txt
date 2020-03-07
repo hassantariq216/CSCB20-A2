@@ -1,0 +1,1 @@
+As a student user, the student can view helpful resources available online through provided links, along with other resources available on Campus and through other sources (such as texts, media files, relevant practise exercises, etc..), when clicking on the 'Resources' button.

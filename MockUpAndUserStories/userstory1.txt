@@ -1,0 +1,1 @@
+As a student user, the student must be able to see information about the instructor, such as contact information and office hours, along with lecture date and times and course information, when clicking on the ‘home’ button, or opening the site to the home page.

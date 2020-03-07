@@ -1,0 +1,1 @@
+As a student user, the student must be able to see all of the dates and relevant information for tests (i.e midterm(s) and final exams), when clicking on the 'Tests' button, or by clicking the 'Calendar' button. 

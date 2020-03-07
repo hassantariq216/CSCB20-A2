@@ -1,0 +1,1 @@
+As a student user, the student must be able to see a table layout of the weekly schedule for lecture materials being taught and practise labs for the course, along with embedded links to any relevant notes or handouts for each, when clicking on the ‘Course Material’ button. The same page may also be opened when clicking on the 'Assignments' Button.

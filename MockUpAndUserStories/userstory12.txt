@@ -1,0 +1,1 @@
+As a student user, when clicking on the 'Faculty of Computer Science UofT' button at the bottom right of the website, the user will be redirected to a pdf outlining information about the Computer Science program at UofT.

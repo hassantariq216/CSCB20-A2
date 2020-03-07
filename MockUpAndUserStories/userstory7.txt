@@ -1,0 +1,1 @@
+As a student user, the student must be able to see an embedded calendar, with the TA's and instructor's office hours and location, along with any other important dates that will be displayed on the calendar, when clicking the 'Calendar' button, or the user can navigate to the same page using the 'Tests' button.

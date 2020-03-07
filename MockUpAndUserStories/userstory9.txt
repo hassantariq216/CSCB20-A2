@@ -1,0 +1,1 @@
+As a student user, the student can view information about the instructor, and TA's for the course, such as their photo ID, office hours, and contact email, when clicking on the 'Course Team' button.

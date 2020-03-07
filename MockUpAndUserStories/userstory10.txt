@@ -1,0 +1,1 @@
+As a student user, when clicking on the 'Piazza' button, the user will be redirected to the piazza forum, for discussion related to the course.

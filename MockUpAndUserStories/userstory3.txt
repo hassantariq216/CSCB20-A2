@@ -1,0 +1,1 @@
+As a student user, the student must be able to see relevant announcements posted by the instructor, to keep themselves up-to-date with course material and/or any other information regarding the course, when clicking the 'home' button or opening up the site to the homepage.

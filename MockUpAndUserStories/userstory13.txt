@@ -1,0 +1,1 @@
+As a student user, when clicking on the 'Syllabus' button on the home page, the user will be redirected to a PDF of the course syllabus, which provides information such as course evaluations, academic integrity, course material, and other general information of the course.

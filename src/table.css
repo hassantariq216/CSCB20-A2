@@ -1,0 +1,48 @@
+.content {
+	display: flex;
+  	flex-wrap: wrap;
+  	flex-direction: column;
+}
+
+table {
+  width: 100%;
+  flex: 1;
+  overflow: none;
+  flex-wrap: wrap;
+}
+
+td {
+  text-align: left;
+  padding: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  padding: 20px; 
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  background-color: grey;
+  color: white;
+}
+
+h2 {
+	text-align: left;
+  	font-family: "Montserrat", sans-serif;
+  	font-weight: 500;
+  	font-size: 40px;
+}
+

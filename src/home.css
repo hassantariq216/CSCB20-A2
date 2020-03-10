@@ -1,0 +1,97 @@
+.home {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about {
+    order: 1;
+    flex: 1 1 75%;
+    padding: 10px 1%;
+    display: block;
+}
+
+.about ul {
+    padding: 1% 1%;
+}
+
+.about li {
+    list-style: none;
+    color: #000000;
+    padding: 15px;
+}
+
+.about a {
+    color: #000000;
+}
+
+.about p {
+    line-height: 1.5;
+}
+
+.about h1 {
+    font-size: xx-large;
+}
+
+.announcements {
+    order: 1;
+    flex: 1 1 25%;
+    padding: 1% 0 0 1%;
+}
+
+.announcements_block {
+    width: 75%;
+    height: 450px;
+    line-height: 2em;
+    padding: 4px;
+    overflow: scroll;
+    background-color: #f8f8f8;
+    border: 2px solid #ccc;
+}
+
+.announcements li {
+    list-style: none;
+    padding: 5%;
+    color: #000000;
+}
+
+.feedback {
+    order: 2;
+    flex: 1 1 100%;
+    padding: 5% 10%;
+    display: block;
+}
+
+.feedback h2 {
+    text-align: center;
+}
+
+.feedback textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    font: inherit;
+    text-after-overflow: scroll;
+}
+
+.feedback input[type=submit] {
+    width: 100px;
+}
+
+input[type=submit]:hover, a:hover {
+    color: #0088a9;
+}
+
+.mont_font {
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}

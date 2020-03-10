@@ -2,7 +2,6 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="table.css">
         <link rel="stylesheet" href="courseMaterial.css">
         <title>CSCB20 - Course Material</title>
     </head>
@@ -33,74 +32,131 @@
 
       <h2>Course Material</h2>  
 
-        <table id="lec_table">
-          <tr>
-            <th>Week</th>
-            <th>Lectures</th>
-            <th>Labs</th>
-            
-          </tr>
-          <tr>
-            <td>1</td> <td>Introduction, Databases background
-              <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p></td> <td>-</td>
-          </tr>
-          <tr>
-            <td>2</td> <td>Schema Diagrams, Relational Algebra
-              <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p></td> <td>Python, Command line 
-                <p>Material: <a href="content/sample1.pdf">Handout</a>, <a href="content/sample1.pdf">Solutions</a></p></td>
-          </tr>
-          <tr>
-            <td>3</td> <td>SQL and MySQL 
-              <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p></td> <td>Relational Algebra 
-              <p>Material: <a href="content/sample1.pdf">Handout</a>, <a href="content/sample1.pdf">Solutions</a></p></td>
-          </tr>
-          <tr>
-            <td>4</td> <td>MySQL Queries, Creating and Editing Tables
-              <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p></td> <td>SQL Queries
-              <p>Material: <a href="content/sample1.pdf">Handout</a>, <a href="content/sample1.pdf">Solutions</a></p></td>
-          </tr>
-          <tr>
-            <td>5</td> <td>MySQL Outer Joins, Views, NULL, string functions, HTML
-            <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p></td> <td>SQL Tables, Join, Views 
-            <p>Material: <a href="content/sample1.pdf">Handout</a>, <a href="content/sample1.pdf">Solutions</a></p></td>
-          </tr>
-          <tr>
-            <td>6</td> <td>HTML 
-            <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p></td> <td>Basic HTML 
-            <p>Material: <a href="content/sample1.pdf">Handout</a>, <a href="content/sample1.pdf">Solutions</a></p></td>
-          </tr>
-          <tr>
-            <td>7</td> <td>CSS 
-            <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p></td> <td>Intro to HTML and CSS 
-            <p>Material: <a href="content/sample1.pdf">Handout</a>, <a href="content/sample1.pdf">Solutions</a></p></td>
-          </tr>
-          <tr>
-            <td>8</td> <td>PHP 
-            <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p></td> <td>PHP Practise 
-            <p>Material: <a href="content/sample1.pdf">Handout</a>, <a href="content/sample1.pdf">Solutions</a></p></td>
-          </tr>
-          <tr>
-            <td>9</td> <td>PHP and SQL 
-            <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p></td> <td>PHP and SQL Practise 
-            <p>Material: <a href="content/sample1.pdf">Handout</a>, <a href="content/sample1.pdf">Solutions</a></p></td>
-          </tr>
-          <tr>
-            <td>10</td> <td>JavaScript and jQuery 
-            <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p></td> <td>JavaScript and jQuery Practise
-            <p>Material: <a href="content/sample1.pdf">Handout</a>, <a href="content/sample1.pdf">Solutions</a></p></td>
-          </tr>
-          <tr>
-            <td>11</td> <td>jQuery, AJAX, JSON 
-            <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p></td> <td>Practise Final 
-              <p>Material: <a href="content/sample1.pdf">Sample Final Fall 2017</a>, <a href="content/sample1.pdf">Sample Final F17 Solutions</a></p></td>
-          </tr>
-          <tr>
-            <td>12</td> <td>Final Review 
-            <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p></td> <td>Practise Final 
-            <p>Material: <a href="content/sample1.pdf">Sample Final Fall 2016</a>, <a href="content/sample1.pdf">Sample Final F16 Solutions</a></p></td>
-          </tr>
-          
-        </table>                
+
+
+      <div class="table_grid">
+
+      <div class="table_heading">Week</div>
+      <div class="table_heading">Lectures</div>
+      <div class="table_heading">Labs</div> 
+
+      <div class="table_item">1</div>
+      <div class="table_item">
+        Introduction, Databases background
+              <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p>
+      </div>
+      <div class="table_item">-</div>  
+
+      <div class="table_item">2</div>
+      <div class="table_item">
+        Schema Diagrams, Relational Algebra
+              <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p>
+      </div>
+      <div class="table_item">
+        Python, Command line 
+                <p>Material: <a href="content/sample1.pdf">Handout</a>, <a href="content/sample1.pdf">Solutions</a></p>
+      </div>
+
+      <div class="table_item">3</div>  
+      <div class="table_item">
+        SQL and MySQL 
+              <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p>
+      </div>
+      <div class="table_item">
+        Relational Algebra 
+              <p>Material: <a href="content/sample1.pdf">Handout</a>, <a href="content/sample1.pdf">Solutions</a></p>
+      </div>
+
+      <div class="table_item">4</div>
+      <div class="table_item">MySQL Queries, Creating and Editing Tables
+              <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p>
+            </div>
+      <div class="table_item">
+        SQL Queries
+              <p>Material: <a href="content/sample1.pdf">Handout</a>, <a href="content/sample1.pdf">Solutions</a></p>
+      </div>  
+
+      <div class="table_item">5</div>
+      <div class="table_item">
+        MySQL Outer Joins, Views, string functions, HTML
+            <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p>
+      </div>
+      <div class="table_item">
+        SQL Tables, Join, Views 
+            <p>Material: <a href="content/sample1.pdf">Handout</a>, <a href="content/sample1.pdf">Solutions</a></p>
+      </div>
+
+      <div class="table_item">6</div>  
+      <div class="table_item">
+        HTML 
+            <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p>
+      </div>
+      <div class="table_item">
+        Basic HTML 
+            <p>Material: <a href="content/sample1.pdf">Handout</a>, <a href="content/sample1.pdf">Solutions</a></p>
+      </div>
+
+      <div class="table_item">7</div>  
+      <div class="table_item">CSS 
+            <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p>
+          </div>
+      <div class="table_item">
+        Intro to HTML and CSS 
+            <p>Material: <a href="content/sample1.pdf">Handout</a>, <a href="content/sample1.pdf">Solutions</a></p>
+      </div>
+
+      <div class="table_item">8</div>  
+      <div class="table_item">
+        PHP 
+            <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p>
+      </div>
+      <div class="table_item">
+        PHP Practise 
+            <p>Material: <a href="content/sample1.pdf">Handout</a>, <a href="content/sample1.pdf">Solutions</a></p>
+      </div>
+
+      <div class="table_item">9</div>  
+      <div class="table_item">
+        PHP and SQL 
+            <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p>
+      </div>
+      <div class="table_item">
+        PHP and SQL Practise 
+            <p>Material: <a href="content/sample1.pdf">Handout</a>, <a href="content/sample1.pdf">Solutions</a></p>
+      </div>
+
+      <div class="table_item">10</div>  
+      <div class="table_item">
+        JavaScript and jQuery 
+            <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p>
+      </div>
+      <div class="table_item">
+        JavaScript and jQuery Practise
+            <p>Material: <a href="content/sample1.pdf">Handout</a>, <a href="content/sample1.pdf">Solutions</a></p>
+      </div>
+
+      <div class="table_item">11</div>  
+      <div class="table_item">
+        jQuery, AJAX, JSON 
+            <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p>
+      </div>
+      <div class="table_item">
+        Practise Final 
+              <p>Material: <a href="content/sample1.pdf">Sample Final Fall 2017</a>, <a href="content/sample1.pdf">Sample Final F17 Solutions</a></p>
+      </div>
+
+      <div class="table_item">12</div>  
+      <div class="table_item">
+        Final Review 
+            <p>Material: <a href="content/sample1.pdf">Reading</a>, <a href="content/sample1.pdf">Lecture</a>, <a href="content/sample1.pdf">In-class Notes</a> </p>
+      </div>
+      <div class="table_item">
+        Practise Final 
+            <p>Material: <a href="content/sample1.pdf">Sample Final Fall 2016</a>, <a href="content/sample1.pdf">Sample Final F16 Solutions</a></p>
+      </div>
+
+      </div>
+              
 
       </div>
 

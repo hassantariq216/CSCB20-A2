@@ -1,68 +1,68 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	background-color: #eee;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
 }
 
 html {
-	height: 100%; /*for consistency on mobile*/
+    height: 100%; /*for consistency on mobile*/
 }
 
 body {
-	min-height: 100%;
-	display: flex;
-	flex-direction: column;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 li, a {
-	font-family: "Montserrat", sans-serif;
-	font-weight: 500;
-	font-size: 16px;
-	color: #edf0f1;
-	text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
 }
 
 header {
-	display: flex;
-	justify-content: space-between; /* pushes elements to the far right */
-	align-items: center; /* centers everything in header */
-	padding: 20px 5%;
-	background-color: #24252A;
+    display: flex;
+    justify-content: space-between; /* pushes elements to the far right */
+    align-items: center; /* centers everything in header */
+    padding: 20px 5%;
+    background-color: #24252A;
 }
 
 .logo {
-	width: 20%;
-	order: 1;
-	margin-right: auto;
-	background-color: #24252A;
+    width: 20%;
+    order: 1;
+    margin-right: auto;
+    background-color: #24252A;
 
 }
 
 nav {
-	order: 2;
+    order: 2;
 }
 
 .options {
-	list-style: none;
-	background-color: #24252A;
+    list-style: none;
+    background-color: #24252A;
 }
 
 .options li {
-	display: inline-block;
-	padding: 0px 9px;
-	background-color: #24252A;
+    display: inline-block;
+    padding: 0px 9px;
+    background-color: #24252A;
 }
 
 .options li a {
-	transition: all 0.3s ease 0s;
-	background-color: #24252A;
+    transition: all 0.3s ease 0s;
+    background-color: #24252A;
 }
 
 .options li a:hover {
-	color: #0088a9;
+    color: #0088a9;
 }
 
 
@@ -94,6 +94,7 @@ footer a:hover {
     padding: 1.2%;
     background-color: #24252A;
 }
+
 .footer_items {
     width: 100%;
     display: flex;
@@ -108,13 +109,13 @@ footer a:hover {
 }
 
 .footer_items li:nth-last-child(2) {
-    flex-grow: 1;      
+    flex-grow: 1;
 }
 
 .content {
-  min-height: calc(100vh - 94px - 94px);
-  background-color: #eee;
-  padding: 0 30px;
+    min-height: calc(100vh - 94px - 94px);
+    background-color: #eee;
+    padding: 0 30px;
 }
 
 

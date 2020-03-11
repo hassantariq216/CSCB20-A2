@@ -29,8 +29,11 @@ header {
     display: flex;
     justify-content: space-between; /* pushes elements to the far right */
     align-items: center; /* centers everything in header */
+    position: fixed;
+    z-index: 1;
     padding: 20px 5%;
     background-color: #24252A;
+    
 }
 
 .logo {
@@ -116,6 +119,8 @@ footer a:hover {
     min-height: calc(100vh - 94px - 94px);
     background-color: #eee;
     padding: 0 30px;
+    position: relative; 
+    margin-top: 170px
 }
 
 

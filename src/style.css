@@ -20,7 +20,7 @@ body {
 li, a {
     font-weight: 500;
     font-size: 16px;
-    color: #edf0f1;
+    color: rgb(237,240,241);
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
 }
@@ -32,7 +32,7 @@ header {
     position: fixed;
     z-index: 1;
     padding: 20px 5%;
-    background-color: #24252A;
+    background-color: rgb(36, 37, 42);
     
 }
 
@@ -40,7 +40,7 @@ header {
     width: 20%;
     order: 1;
     margin-right: auto;
-    background-color: #24252A;
+    background-color: rgb(36, 37, 42);
 
 }
 
@@ -50,18 +50,18 @@ nav {
 
 .options {
     list-style: none;
-    background-color: #24252A;
+    background-color: rgb(36, 37, 42);
 }
 
 .options li {
     display: inline-block;
     padding: 0px 9px;
-    background-color: #24252A;
+    background-color: rgb(36, 37, 42);
 }
 
 .options li a {
     transition: all 0.3s ease 0s;
-    background-color: #24252A;
+    background-color: rgb(36, 37, 42);
 }
 
 .options li a:hover {
@@ -76,7 +76,7 @@ nav {
 }
 
 footer {
-    background-color: #24252A;
+    background-color: rgb(36, 37, 42);
     color: #bbb;
     line-height: 1.5;
 
@@ -85,7 +85,7 @@ footer {
 
 footer a {
     text-decoration: none;
-    background-color: #24252A;
+    background-color: rgb(36, 37, 42);
     transition: all 0.3s ease 0s;
 }
 
@@ -102,13 +102,13 @@ footer a:hover {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    background-color: #24252A;
+    background-color: rgb(36, 37, 42);
 }
 
 .footer_items li {
     margin: 0.6%;
     white-space: nowrap;
-    background-color: #24252A;
+    background-color: rgb(36, 37, 42);
 }
 
 .footer_items li:nth-last-child(2) {

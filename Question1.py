@@ -2,6 +2,7 @@ from flask import Flask, render_template, escape, request
 
 app = Flask(__name__)
 
+@app.route('/', defaults={'name': 'human'})
 @app.route('/<name>')
 def generateResponse(name):
 
@@ -25,15 +26,6 @@ def generateResponse(name):
            (       	
               "".join(filter(str.isalpha, name)))
            ) 
-
-@app.route('/')
-def generateResponseEmptyString():
-
-    return """
-        <html><body>
-        <h1>  </h1>
-        </body></html>
-        """
 
 if __name__ == "__main__":
     app.run()

@@ -1,0 +1,22 @@
+/* Need to fix some style elements - rough styling for testing purposes only */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+
+* { 
+  box-sizing: border-box
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+h2:hover {
+	color: #0088a9;
+}

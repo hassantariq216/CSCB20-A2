@@ -1,0 +1,61 @@
+/* Need to fix some style elements - rough styling for testing purposes only */
+
+* { 
+  box-sizing: border-box
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 20px;
+}
+
+input[type=text], input[type=username2] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.reg_button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.reg_button:hover {
+  opacity:1;
+}
+
+a {
+  text-decoration: none;
+  background-color: rgb(36, 37, 42);
+  transition: all 0.3s ease 0s;
+}
+
+a:hover {
+    color: #0088a9;
+    text-decoration: underline;
+}
+
+.login_active {
+  background-color: #f1f1f1;
+  text-align: center;
+}

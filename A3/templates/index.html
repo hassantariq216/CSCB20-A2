@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
+    <title>CSCB20</title>
+</head>
+
+<body>
+
+
+
+<header>
+
+    <img class="logo" src="{{url_for('static', filename='final.png')}}" alt="logo">
+
+    <nav>
+        <ul class="options">
+
+            <li><a href="{{url_for('static', filename='index.html')}}">Home</a></li>
+            <li><a href="{{url_for('static', filename='index.html')}}">Course Material</a></li>
+            <li><a href="{{url_for('static', filename='index.html')}}">Assignments</a></li>
+            <li><a href="{{url_for('static', filename='index.html')}}">Tests</a></li>
+            <li><a href="{{url_for('static', filename='index.html')}}">Calendar</a></li>
+            <li><a href="{{url_for('static', filename='index.html')}}">Course Team</a></li>
+            <li><a href="{{url_for('static', filename='index.html')}}">Resources</a></li>
+            <li><a href="https://piazza.com/">Piazza</a></li>
+            <li><a href="https://markus.utsc.utoronto.ca">Markus</a></li>
+
+        </ul>
+    </nav>
+</header>
+
+<div class="content mont_font">
+    <section class="home">
+        <section class="about">
+            <h1>About</h1>
+            <ul>
+                <li>Instructor: Anna Bretcher</li>
+                <li>Email: <a href="mailto:bretscher@utsc.utoronto.ca">bretscher@utsc.utoronto.ca</a></li>
+                <li>Office: IC493 (Wednesday 11:00 - 12:00)</li>
+                <li>Phone: (416) 208-4745</li>
+                <li>Lecture(s): Mondays 9:15 - 11:00 in HW216</li>
+                <li><a href="http://www.utsc.utoronto.ca/~bretscher/b20/syllabus.pdf">Syllabus</a></li>
+            </ul>
+            <div>
+                <h2>Course Details</h2>
+                <ul>
+                    <li><b>Prerequisites:</b> Some experience with programming in an imperative language such as Python,
+                        Java or C.
+                    </li>
+                    <li><b>Exclusions:</b> This course may not be taken after - or concurrently with - any C- or D-level
+                        CSC course.
+                    </li>
+                </ul>
+                <p>A practical introduction to databases and Web app development. Databases: terminology and
+                    applications; creating,
+                    querying and updating databases; the entity-relationship model for database design. Web documents
+                    and applications:
+                    static and interactive documents; Web servers and dynamic server-generated content; Web application
+                    development and interface with databases.</p>
+            </div>
+        </section>
+        <section class="announcements">
+            <h2>Announcements</h2>
+            <div class="announcements_block">
+                <ul>
+                    <li>
+                        <h3>Jan 2: Welcome</h3>
+                        <p>Welcome to CSCB20. Please note that tutorials will begin in week 2.</p>
+                    </li>
+                    <li>
+                        <h3>Jan 5: Tutorials</h3>
+                        <p>Please be in a tutorial by the end of week 4</p>
+                    </li>
+                    <li>
+                        <h3>Feb 6: Quiz Change</h3>
+                        <p>The date for quiz 3 has been changed to Feb 25</p>
+                    </li>
+                    <li>
+                        <h3>April 19: Big Curve</h3>
+                        <p>You all failed your exams, so were gonna curve you by 90%</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="feedback">
+            <H2>Anonymous Feedback</H2>
+            <form>
+                <label>
+                    <textarea placeholder="Some Text..."></textarea>
+                </label>
+                <input type="submit" class="mont_font" value="Submit">
+            </form>
+        </section>
+    </section>
+</div>
+
+<footer>
+
+    <section class="footer_text">
+        <ul class="footer_items">
+            <li>Designed by Hassan Tariq and Wilson Mak</li>
+            <li><a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">Faculty of Computer Science
+                UofT</a></li>
+        </ul>
+    </section>
+
+</footer>
+
+</body>
+</html>

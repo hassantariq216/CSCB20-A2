@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to CSCB20</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/welcomeScreen.css') }}">
+
+</head>
+<body>
+	<div class="text_box">
+		<span class="big_text">Welcome Back {{ value }}!</span>
+		<span class="small_text">
+			<a href="http://0.0.0.0:5000/home">CSCB20 Homepage</a>
+		</span>
+		<span class="small_text">
+			<a href="http://0.0.0.0:5000/home">View Grades</a>
+		</span>
+	</div>
+	
+</body>
+</html>

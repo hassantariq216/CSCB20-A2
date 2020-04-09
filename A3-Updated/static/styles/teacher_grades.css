@@ -1,0 +1,54 @@
+.table {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/*.table .th {*/
+/*    background-color: #2196F3;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.table .tr {*/
+/*    border-bottom: 1px solid #000;*/
+/*}*/
+
+/*.table .tr:hover {*/
+/*    background-color: #dddddd;*/
+/*}*/
+
+.cell {
+    background-color: inherit;
+    flex: 1 1 14%;
+    padding: 15px;
+    overflow: hidden;
+    text-align: center;
+    /*border-bottom: 1px solid #000;*/
+}
+
+.remark-block {
+    font: inherit;
+    background-color: #eeeeee;
+    width: 75%;
+    height: 450px;
+    line-height: 2em;
+    padding: 4px;
+    overflow: scroll;
+}
+
+.remark-block li {
+    list-style: none;
+    padding: 5%;
+    color: #000000;
+}
+
+.mont_font {
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}

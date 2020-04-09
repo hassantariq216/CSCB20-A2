@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    {% block style %}
+
+    {% endblock %}
+    
+    <title>{% block title %}{% endblock %} - CSCB20</title>
+
+</head>
+
+<header>
+
+    <img class="logo" src="{{url_for('static', filename='images/final.png')}}" alt="logo">
+
+    <nav>
+        <ul class="options">
+
+            <li><a href="http://0.0.0.0:5000/home">Home</a></li>
+            <li><a href="http://0.0.0.0:5000/coursematerial">Course Material</a></li>
+            <li><a href="http://0.0.0.0:5000/assignments">Assignments</a></li>
+            <li><a href="http://0.0.0.0:5000/calendar">Tests/Calendar</a></li>
+            <li><a href="http://0.0.0.0:5000/courseteam">Course Team</a></li>
+            <li><a href="http://0.0.0.0:5000/resources">Resources</a></li>
+            <li><a href="http://0.0.0.0:5000/grades">View/Manage Grades</a></li>
+            <li><a href="http://0.0.0.0:5000/feedback">Feedback</a></li>
+            <li><a href="https://piazza.com/">Piazza</a></li>
+            <li><a href="https://markus.utsc.utoronto.ca">Markus</a></li>
+
+        </ul>
+
+        <h6 class="big_text">Hi {% block user_name %} {% endblock %}! <a href="http://0.0.0.0:5000/logout" class="logout_link">Log Out</a></h6>
+
+    </nav>
+
+</header>
+
+    {% block content %}
+
+    {% endblock %}
+    
+
+<footer>
+
+    <section class="footer_text">
+        <ul class="footer_items">
+            <li>Designed by Hassan Tariq and Wilson Mak</li>
+            <li><a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science">Faculty of Computer Science
+                UofT</a></li>
+        </ul>
+    </section>
+
+</footer>
+
+</body>
+</html>

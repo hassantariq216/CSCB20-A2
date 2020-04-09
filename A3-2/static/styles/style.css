@@ -19,10 +19,12 @@ body {
 
 li, a {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 15px;
     color: rgb(237,240,241);
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
+    margin-bottom: 12px;
+    align-items: center;
 }
 
 header {
@@ -31,7 +33,7 @@ header {
     align-items: center; /* centers everything in header */
     position: fixed;
     z-index: 1;
-    padding: 20px 5%;
+    padding: 15px 1%;
     background-color: rgb(36, 37, 42);
     
 }
@@ -118,10 +120,37 @@ footer a:hover {
 .content {
     min-height: calc(100vh - 90px - 90px);
     background-color: #eee;
-    padding: 0 30px;
+    padding: 20px 30px;
     position: relative; 
     margin-top: 150px
 }
+
+h6 {
+    background-color: rgb(36, 37, 42);
+    text-align: right;
+}
+
+.big_text {
+    text-align: right;
+    font-size: 18px;
+    font-style: italic;
+    text-decoration: none;
+    color: white;
+}
+
+.logout_link {
+    background-color: rgb(36, 37, 42);
+    color: white;
+    font-size: 14px;
+}
+
+
+.logout_link:hover {
+    text-decoration: underline;
+    color: #0088a9;
+}
+
+
 
 
 

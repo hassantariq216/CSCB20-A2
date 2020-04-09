@@ -1,0 +1,106 @@
+* { 
+  box-sizing: border-box
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.feedback_menu {
+  width: 90vw;
+  margin: 5% auto;
+  margin-top: 20vh;
+}
+
+.feedback_box {
+  display: flex;
+  padding: 2em;
+}
+
+.details {
+  flex: 1;
+  order: 1;
+  margin-right: 2vw;
+}
+
+.details h1 {
+  width: 100%;
+  text-align: left;
+  color: black;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.details h2 {
+  width: 100%;
+  text-align: left;
+  color: black;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.details {
+  width: 100%;
+  color: black;
+}
+
+.details p {
+  width: 100%;
+  color: black;
+  text-align: left;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.details button {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #00BFFF;
+  text-align: center;  
+  color: black;
+  padding: 10px 20px;
+  border-radius: 35px;
+  font-size: 25px;
+  text-transform: uppercase;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.details button:focus {
+    border-color:#333;
+}
+
+.details button:hover {
+  background: #016ABC;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px black;
+  text-shadow:none;
+}
+
+.details select {
+  width: 100%;
+  font-size: 20px;
+  color: black;
+}
+
+.details input, .details button, .details select {
+  padding: 1em;
+  margin-bottom: 2vw;
+}
+
+.details input {
+  width: 100%;
+  background: transparent;
+  color: black;
+  border-radius: 35px;
+  font-size: 18px;
+}
+
+.details label {
+  color: black;
+  line-height: 35px;
+  font-size: 20px;
+  width: 100%;
+}

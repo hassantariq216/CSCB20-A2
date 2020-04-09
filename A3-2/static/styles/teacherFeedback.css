@@ -1,0 +1,60 @@
+.table_grid {
+  font-family: "Montserrat", sans-serif;
+  display: grid;
+  padding: 20px 20px;
+  margin-bottom: 4vh;
+  margin-top: 5vh;
+}
+
+.table_heading {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+.row {
+  font-family: "Montserrat", sans-serif;
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: auto auto auto auto auto;
+  background-color: grey;
+  padding: 10px;
+  margin-bottom: 4vh;
+  margin-top: 4vh;
+}
+
+.table_item {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 12px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.table_item_wide {
+  grid-column: 1 / 6;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 12px;
+  font-size: 16px;
+  text-align: center;
+  border-style: ridge;
+  cursor: pointer;
+}
+
+.table_item_wide p {
+  background-color: lightgrey;
+  font-size: 12px;
+}
+
+.table_item_wide:hover {
+  border-style: inset;
+}
+
+h2 {
+  margin-top: 20vh;
+  text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+}

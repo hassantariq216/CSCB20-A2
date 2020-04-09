@@ -12,36 +12,34 @@
 
 <header>
 
-    <img class="logo" src="{{url_for('static', filename='final.png')}}" alt="logo">
+    <img class="logo" src="{{url_for('static', filename='images/final.png')}}" alt="logo">
 
     <nav>
         <ul class="options">
 
             <li><a href="http://0.0.0.0:5000/home">Home</a></li>
-            <li><a href="{{url_for('static', filename='index.html')}}">Course Material</a></li>
-            <li><a href="{{url_for('static', filename='index.html')}}">Assignments</a></li>
-            <li><a href="{{url_for('static', filename='index.html')}}">Tests</a></li>
-            <li><a href="{{url_for('static', filename='index.html')}}">Calendar</a></li>
-            <li><a href="{{url_for('static', filename='index.html')}}">Course Team</a></li>
-            <li><a href="{{url_for('static', filename='index.html')}}">Resources</a></li>
+            <li><a href="http://0.0.0.0:5000/coursematerial">Course Material</a></li>
+            <li><a href="http://0.0.0.0:5000/assignments">Assignments</a></li>
+            <li><a href="http://0.0.0.0:5000/calendar">Tests/Calendar</a></li>
+            <li><a href="http://0.0.0.0:5000/courseteam">Course Team</a></li>
+            <li><a href="http://0.0.0.0:5000/resources">Resources</a></li>
+            <li><a href="http://0.0.0.0:5000/grades">View/Manage Grades</a></li>
+            <li><a href="http://0.0.0.0:5000/feedback">Feedback</a></li>
             <li><a href="https://piazza.com/">Piazza</a></li>
             <li><a href="https://markus.utsc.utoronto.ca">Markus</a></li>
 
         </ul>
+
+        <h6 class="big_text">Hi {% block user_name %} {% endblock %}! <a href="http://0.0.0.0:5000/logout" class="logout_link">Log Out</a></h6>
+
     </nav>
+
 </header>
-
-<div class="content mont_font">
-
-    <div class="logout_menu">
-        <h6 class="big_text">Hi {% block user_name %}{% endblock %}! <a href="http://0.0.0.0:5000/logout" class="logout_link">Log Out</a></h6>
-    </div>
 
     {% block content %}
 
     {% endblock %}
     
-</div>
 
 <footer>
 

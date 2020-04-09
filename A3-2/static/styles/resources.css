@@ -1,0 +1,42 @@
+.resources_s {
+    font: inherit;
+    padding: 10px 1%;
+}
+
+.resources_s h2, ul, p {
+    color: #000000;
+}
+
+.resources_s a {
+    color: #5F9EA0;
+}
+
+.resources_s a:hover {
+    color: #0088a9;
+}
+
+.resources_s ul {
+    padding-left: 1%;
+}
+
+.resources_s li {
+    list-style: none;
+    padding: 10px;
+}
+
+.resources_s p {
+    padding: 5px;
+}
+
+.code_font {
+    font-family: monospace;
+}
+
+.mont_font {
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
+

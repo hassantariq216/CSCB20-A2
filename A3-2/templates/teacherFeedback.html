@@ -1,0 +1,67 @@
+{% extends "index.html" %}
+
+{% block style %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/teacherFeedback.css') }}">
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( ".table_grid" )
+      .accordion({
+        header: "> .table_item_wide"
+      })
+      .sortable({
+        axis: "y",
+        handle: ".table_item_wide",
+        stop: function( event, ui ) {
+          // IE doesn't register the blur when sorting
+          // so trigger focusout handlers to remove .ui-state-focus
+          ui.item.children( ".table_item_wide" ).triggerHandler( "focusout" );
+ 
+          // Refresh accordion to handle new order
+          $( this ).accordion( "refresh" );
+        }
+      });
+  } );
+  </script>
+
+
+
+{% endblock %}
+
+{% block title %}
+Feedback
+{% endblock %}
+{% block user_name %}
+{{ value }}
+{% endblock %}
+
+{% block content %}
+
+  <h2>Anonymous Feedback Results</h2>
+    <div class="table_grid">
+
+        {% for item in user %}
+        <div class="table_item_wide">Anonymous Feedback {{ loop.index }}
+            <p>(click to expand)</p></div>
+        <div class="row">
+            <div class="table_heading">Q1 Response</div>
+            <div class="table_heading">Q2 Response</div>
+            <div class="table_heading">Q3 Response</div>
+            <div class="table_heading">Q4 Response</div>
+            <div class="table_heading">Q5 Response</div> 
+            <div class="table_item">{{ item['q1'] }}</div>
+            <div class="table_item">{{ item['q2'] }}</div>
+            <div class="table_item">{{ item['q3'] }}</div>
+            <div class="table_item">{{ item['q4'] }}</div>
+            <div class="table_item">{{ item['q5'] }}</div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}
+
+

@@ -1,0 +1,129 @@
+* { 
+  box-sizing: border-box
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+}
+
+.reg_menu {
+  width: 70vw;
+  margin: 5% auto;
+}
+
+.reg_box {
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 3em;
+}
+
+.details {
+  flex: 1;
+  order: 1;
+  margin-right: 2vw;
+}
+
+.details h1 {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.details h2 {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+
+.details h4 {
+  width: 50%;
+  text-align: left;
+  color: #fff;
+  font-size: 14px;
+}
+
+.details {
+  width: 100%;
+  color: #fff;
+}
+
+.details p {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+
+.details p a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.details p a:hover {
+  text-decoration: underline;
+  color: #016ABC;
+}
+
+.details button {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #00BFFF;
+  text-align: center;  
+  color: black;
+  padding: 15px 50px;
+  border-radius: 35px;
+  font-size: 25px;
+  text-transform: uppercase;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.details button:focus {
+    border-color:#333;
+}
+
+.details button:hover {
+  background: #016ABC;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px white;
+  text-shadow:none;
+}
+
+.details #user_type {
+  width: 35%;
+  font-size: 20px;
+}
+
+.details #instructor_name {
+  width: 25%;
+  font-size: 20px;
+}
+
+.details input, .details button, .details select {
+  padding: 1em;
+  margin-bottom: 2vw;
+}
+
+.details input {
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  border-radius: 35px;
+  font-size: 18px;
+}
+
+.details label {
+  color: #fff;
+  line-height: 35px;
+  font-size: 20px;
+}
+
+

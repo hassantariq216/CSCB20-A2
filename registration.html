@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/registration.css') }}">
+    <title>Registration Menu</title>
+
+	</head>
+
+	<body>
+
+    <div class="reg_menu">
+
+		  <form action="/registerform" class="reg_box" method="POST">
+
+        <div class="details">
+
+        <h1>Registration Menu</h1>
+
+        <h2>{{ value }}</h2>
+
+          <p>Please fill in this form to create an account.</p>
+
+    			<label for="usn"><b>Username</b></label>
+    			<input type="username2" placeholder="Enter Username" name="usn" required>
+
+    			<label for="psw"><b>Password</b></label>
+    			<input type="password" placeholder="Enter Password" name="psw" required>
+
+          <label for="name2"><b>Name</b></label>
+          <input type="name_of_user" placeholder="Enter Your Full Name" name="name2" required>
+
+    			<select id="user_type" name="user_type">
+        		<option value="student">Student</option>
+          	<option value="instructor">Instructor</option>
+        	</select>
+
+          <div id="outer_element">
+
+          <h4>If Registering as a Student, Please Select your Instructor:</h4>
+
+          <select id="instructor_name" name="instructor_name">
+            {% for item in teacherlist %}
+            <option value="{{ item['t_id'] }}">{{ item['t_name'] }}</option>
+            {% endfor %}
+          </select>
+
+        </div>
+
+    			<button type="submit" class="reg_button">Register</button>
+        
+
+          <p>By Registering, you agree to our <a href="{{url_for('static', filename='sample1.pdf')}}">Terms & Conditions</a>.</p>
+
+          <p>If you already have an account, <a href="http://0.0.0.0:5000/">Sign in</a>.</p>
+
+          </div>
+
+		  </form>
+
+    </div>
+
+	</body>
+</html>

@@ -1,0 +1,41 @@
+.pop-out {
+    font: inherit;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 25%;
+    width: 50%;
+    background-color: transparent;
+}
+
+.pop-out-content {
+    font: inherit;
+    background-color: #0088a9;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 10px;
+    width: 70%; /* Could be more or less, depending on screen size */
+}
+
+.pop-out-close {
+    background-color: inherit;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.pop-out-close:hover,
+.pop-out-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.poppy:hover {
+    background-color: #0088a9;
+    cursor: pointer;
+}
+
+.poppy:hover:after {
+    content: ' - Click to see request(s)';
+}

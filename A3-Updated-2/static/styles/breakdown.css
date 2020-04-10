@@ -1,0 +1,26 @@
+.collapsible {
+    cursor: pointer;
+}
+
+.collapsible:hover{
+    background-color: #5F9EA0;
+}
+
+.collapsible:hover:after{
+    content: ' - Click for breakdown';
+}
+
+.collapsed {
+    display: none;
+}
+
+.expanded {
+    display: flex;
+    width: 100%;
+    background-color: wheat;
+}
+
+.expanded .cell{
+    background-color: inherit;
+    padding: 10px;
+}

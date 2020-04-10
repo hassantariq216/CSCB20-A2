@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/login.css') }}">
+	<title>Log In</title>
+
+</head>
+<body>
+
+	<div class="log-in">
+
+		<form action="/login" class="login_box" method="POST">			
+
+			<div class="details"> 
+
+			<h1>Login to CSCB20</h1>
+
+			<h2>{{ value }}</h2>
+
+			
+
+			<label for='username'>Username</label>
+  			<input type="username" name="username" placeholder="Username">
+
+  			<label for='password'>Password</label>
+			<input type="password" name="password" placeholder="Password">
+
+			<input type="Submit" value="Log in" id="submitbtn">
+
+			<h3>If you're new to the site, please <a href="http://0.0.0.0:5000/register">Register</a></h3>
+
+			</div>
+
+		</form>
+
+	</div>
+
+</body>
+</html>
+
+
+

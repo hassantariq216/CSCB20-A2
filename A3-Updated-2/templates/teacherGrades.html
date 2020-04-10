@@ -1,0 +1,116 @@
+{% extends "index.html" %}
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/teacher_grades.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/breakdown.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/popper.css') }}">
+    <script src="{{ url_for('static', filename='javascript/grades.js') }}"></script>
+{% endblock %}
+
+{% block title %}
+    Class Grades
+{% endblock %}
+{% block user_name %}
+    {{ value }}
+{% endblock %}
+
+{% block content %}
+    <div class="table">
+        <div class="cell">Full Name</div>
+        <div class="cell">Student ID</div>
+        <div class="cell">Lab Avg</div>
+        <div class="cell">Assignment Avg</div>
+        <div class="cell">Test/Exam Avg</div>
+        <div class="cell">Student Avg</div>
+        <div class="cell">Remark Requests</div>
+
+        {% for user in students %}
+            <div class="cell">{{ user['s_name'] }}</div>
+            <div class="cell">{{ user['s_id'] }}</div>
+            <div class="cell collapsible" onclick="expand('{{ user['s_id']+'_l' }}')">{{ averages[user['s_id']][0] }}%
+            </div>
+            <div class="cell collapsible" onclick="expand('{{ user['s_id']+'_a' }}')">{{ averages[user['s_id']][1] }}%
+            </div>
+            <div class="cell collapsible" onclick="expand('{{ user['s_id']+'_t' }}')">{{ averages[user['s_id']][2] }}%
+            </div>
+            <div class="cell">{{ averages[user['s_id']][3] }}%</div>
+            <div class="cell poppy" onclick="popper('{{ user['s_id']+'_p' }}')">{{ remark[user['s_id']] }}</div>
+
+
+            <div id={{ user['s_id']+'_l' }} class="collapsed">
+                {% for i in range(9) %}
+                    <div class="cell">L{{ i + 1 }}: {{ user['lab' ~ (i + 1) ~ '_grade'] }}%</div>
+                {% endfor %}
+            </div>
+            <div id={{ user['s_id']+'_a' }} class="collapsed">
+                {% for i in range(3) %}
+                    <div class="cell">A{{ i + 1 }}: {{ user['a' ~ (i + 1) ~ '_grade'] }}%</div>
+                {% endfor %}
+            </div>
+            <div id={{ user['s_id']+'_t' }} class="collapsed">
+                <div class="cell">T1: {{ user['test1_grade'] }}%</div>
+                <div class="cell">T2: {{ user['test2_grade'] }}%</div>
+                <div class="cell">FINAL: {{ user['exam_grade'] }}%</div>
+            </div>
+
+            <div id="{{ user['s_id']+'_p' }}" class="pop-out">
+                <div class="pop-out-content">
+                    <span id="{{ user['s_id']+'_pc' }}" class="pop-out-close">&times;</span>
+                    <div class="remark-block">
+                        <ul>
+                            {% for i in range(9) %}
+                                {% if user['lab'~(i + 1)~'_remark'] == 1 %}
+                                    <li>
+                                        <h3>Lab {{ i + 1 }}: {{ user['lab' ~ (i + 1) ~ '_grade'] }}%</h3>
+                                        <p>Reason: {{ user['lab'~(i + 1)~'_reason'] }}</p>
+                                        <form action="/teacherremark" method="post">
+                                            <input type="hidden" name="eval" value="{{ 'lab' ~ (i + 1) }}">
+                                            <label>Grade Change:
+                                                <input type="number" name="new_grade">
+                                            </label>
+                                            <button type="submit" name="student_id" value="{{ user['s_id'] }}">Accept
+                                            </button>
+                                            <button type="submit" name="student_id" value="{{ user['s_id'] }}">Deny
+                                            </button>
+                                        </form>
+                                    </li>
+                                {% endif %}
+                                {% if user['a'~(i + 1)~'_remark'] == 1 and i < 3 %}
+                                    <li>
+                                        <h3> Assignment {{ i + 1 }}: {{ user['a' ~ (i + 1) ~ '_grade'] }}%</h3>
+                                        <p>Reason: {{ user['a'~(i + 1)~'_reason'] }}</p>
+                                        <form action="/teacherremark" method="post">
+                                            <input type="hidden" name="eval" value="{{ 'a' ~ (i + 1) }}">
+                                            <label>Grade Change:
+                                                <input type="number" name="new_grade">
+                                            </label>
+                                            <button type="submit" name="student_id" value="{{ user['s_id'] }}">Accept
+                                            </button>
+                                            <button type="submit" name="student_id" value="{{ user['s_id'] }}">Deny
+                                            </button>
+                                        </form>
+                                    </li>
+                                {% endif %}
+                                {% if user['test'~(i + 1)~'_remark'] == 1 and i < 3 %}
+                                    <li>
+                                        <h3> Test {{ i + 1 }}: {{ user['test' ~ (i + 1) ~ '_grade'] }}%</h3>
+                                        <p>Reason: {{ user['test'~(i + 1)~'_reason'] }}</p>
+                                        <form action="/teacherremark" method="post">
+                                            <input type="hidden" name="eval" value="{{ 'test' ~ (i + 1) }}">
+                                            <label>Grade Change:
+                                                <input type="number" name="new_grade">
+                                            </label>
+                                            <button type="submit" name="student_id" value="{{ user['s_id'] }}">Accept
+                                            </button>
+                                            <button type="submit" name="student_id" value="{{ user['s_id'] }}">Deny
+                                            </button>
+                                        </form>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

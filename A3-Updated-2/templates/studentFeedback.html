@@ -1,0 +1,55 @@
+{% extends "index.html" %}
+{% block style %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/studentFeedback.css') }}">
+{% endblock %}
+
+{% block title %}
+Feedback
+{% endblock %}
+{% block user_name %}
+{{ value }}
+{% endblock %}
+
+{% block content %}
+<div class="feedback_menu">
+
+	<form action="/feedbackform" class="feedback_box" method="POST">
+
+        <div class="details">
+
+          <h2>{{ value2 }}</h2>
+        	<h1>Feedback Menu</h1>
+          
+
+          	<p>Please fill out this form to leave feedback for your Instructor.</p>
+
+            <select id="instructor_option" name="instructor option">
+              {% for item in user4 %}
+              <option value="{{ item['t_name'] }}">{{ item['t_name'] }}</option>
+              {% endfor %}
+            </select>
+            
+
+    		  <label for="q1"><b>What do you like about the teaching approach of the instructor?</b></label>
+    		  <input type="q1_text" placeholder="Enter Text" name="q1" required>
+
+    		  <label for="q2"><b>What do you suggest the instructor should do to improve their teaching?</b></label>
+    		  <input type="q2_text" placeholder="Enter Text" name="q2" required>
+
+          	<label for="q3"><b>What benefits and drawbacks do the labs provide for your teaching experience?</b></label>
+          	<input type="q3_text" placeholder="Enter Text" name="q3" required>
+
+          	<label for="q4"><b>What would you suggest the instructor should do to improve the labs?</b></label>
+          	<input type="q4_text" placeholder="Enter Text" name="q4" required>
+
+          	<label for="q5"><b>Rate your overall experience in this course with your instructor.</b></label>
+          	<input type="q5_text" placeholder="Enter Text" name="q5" required>
+
+    		  <button type="submit" class="reg_button">Submit</button>
+
+          </div>
+
+	</form>
+
+</div>
+{% endblock %}

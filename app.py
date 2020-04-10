@@ -47,7 +47,7 @@ def close_connection(exception):
 def home(name_user):
     if not session.get('logged_in'):
         if name_user == 'error':
-            return render_template('login.html', value="Error: Incorrect Username and/or Password")
+            return render_template('login.html', value="Error: Incorrect or Invalid Username and/or Password")
         else:
             return render_template('login.html')
     else:
@@ -103,7 +103,7 @@ def reg():
     teacher = []
     for teacherlist in query_db('select * from teacher'):
         teacher.append(teacherlist)
-    
+
     db.close()
 
     return render_template('registration.html', teacherlist=teacher)
@@ -129,21 +129,31 @@ def register_menu():
 
     student = []
     teacher = []
+
+    teacher2=[]
+    for teacherlist in query_db('select * from teacher'):
+        teacher2.append(teacherlist)
+
+    if (len(passw)<8):
+        connection.close()
+        return render_template('registration.html', teacherlist=teacher2, value="Error: Please enter atleast 8 characters for the Password!")
+
     for user in query_db('select * from student'):
         if request.form['usn'] == list(user.values())[0]:
             connection.close()
-            return render_template('registration.html', value="Error: Username already exists!")
+            return render_template('registration.html', teacherlist=teacher2, value="Error: Username already exists!")
 
     for user2 in query_db('select * from teacher'):
         if request.form['usn'] == list(user2.values())[0]:
             connection.close()
-            return render_template('registration.html', value="Error: Username already exists!")
+            return render_template('registration.html',teacherlist=teacher2, value="Error: Username already exists!")
 
     if type_user == 'student':
         try:
             cursor.execute('INSERT INTO student (s_id,s_password, s_name) VALUES (?,?,?)', (usern, passw, name_us))
             cursor.execute('INSERT INTO grades (s_id,t_id, lab1_grade, lab2_grade, lab3_grade, lab4_grade, lab5_grade, lab6_grade, lab7_grade, lab8_grade, lab9_grade, a1_grade, a2_grade, a3_grade, test1_grade, test2_grade, exam_grade) \
-             VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (usern, instructor_user, -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1))
+             VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+                           (usern, instructor_user, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1))
             connection.commit()
             message = "success"
         except:
@@ -314,6 +324,23 @@ def class_grades():
         requests[user['s_id']] = r
     return render_template('teacherGrades.html', students=std_class, averages=avgs, remark=requests,
                            value=session['user_name'])
+
+
+@app.route('/setgrade', methods=['POST'])
+def teacher_add_grade():
+    connetion = get_db()
+    cursor = connetion.cursor()
+    sid = request.form['s_id']
+    gc = request.form['grade']
+    evaluation = request.form['eval']
+
+    try:
+        cursor.execute('UPDATE grades SET (%s) = ? where s_id = ?' % (evaluation,), (gc, sid))
+        connetion.commit()
+    except:
+        connetion.rollback()
+    finally:
+        return class_grades()
 
 
 @app.route('/teacherremark', methods=['POST'])
